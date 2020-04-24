@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+* { box-sizing: border-box; }
+body{
+	background-color: #FFFFFF;
+	font-family: 'Nanum Gothic', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #333;
+	align-items: center;
+	text-align: center;
+}
+body, form, div, span{
+	margin: 0;
+	padding: 0;
+}
+ul, li, button, a{
+	list-style: none;
+	text-decoration: none;
+		
+
+}
+div{
+	display: block;
+}
+a{
+	color: inherit; /* 앵커 태그에게 부모한테 받은 색상을 알려줌 */
+	text-decoration: none;
+}
+/* 글자색, 배경색 */
+.f-color1{color: #333;}
+.f-color2{color: #F1F1F1;}
+.f-color3{color: #D1D1DD;}
+.bg-color1{background-color: #FFFFFF;}
+.bg-color2{background-color: #F1F1F1;}
+.bg-color3{background-color: #D1D1DD;}
+.bg-color4{background-color: #FFA500;}
+
+.f-large{
+	font-size: 24px;
+	font-weight: bold;
+}
+.f-medium{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* 버튼들 */
+button.btn{
+	display: inline-block;
+	font-weight: normal;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 10px 10px;
+	border: 0;
+	min-width: 80px;
+}
+button.btn-basic{
+	background-color: #FFA500;
+	color: #FFFFFF;
+}
+button.btn-basic:hover{
+	color: #FFFFFF;
+	background-color: #FFA500;
+
+	
+}
+button.btn-primary{
+	background-color: #FFD700;
+	color: #FFFFFF;
+}
+button.btn-primary:hover{
+	background-color: #FFD700;
+	color: #FFFFFF;
+}
+button.btn-support {
+	background-color: #DCDCDC;
+	color: #111;
+}
+button.btn-support:hover{
+	background-color: #DCDCDC;
+	
+}
+
+/* Text 밑줄 쳐지는 CSS 효과 */
+.magicline:after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2.5px;
+	background-color: #506763;
+	transition: width 0.3s;
+	
+}
+.magicline:hover:after{
+	width: 100%;
+}
