@@ -303,7 +303,7 @@
 								<div class="header_dropdown">
 								<div class="arrow"></div>
 									<ul class="header_dropdown_menu">
-									<li><a href="#">강의</a></li>
+									<li><a href="#">강의목록</a></li>
 									<li><a href="#">강의</a></li>
 									<li><a href="#">강의</a></li>
 									<li><a href="#">강의</a></li>
@@ -317,9 +317,9 @@
 								<div class="header_dropdown">
 								<div class="arrow"></div>
 									<ul class="header_dropdown_menu">
-									<li><a href="#">커뮤니티</a></li>
-									<li><a href="#">커뮤니티</a></li>
-									<li><a href="#">커뮤니티</a></li>
+									<li><a href="#">자유게시판</a></li>
+									<li><a href="#">Q&A</a></li>
+									<li><a href="#">수강후기</a></li>
 									<li><a href="#">커뮤니티</a></li>
 								</ul>
 							</div>
