@@ -299,7 +299,7 @@
 					
 					<div class="header_content_dropdown_wrap">
 						<div class="header_content_dropdown_group">
-							<a href="#" class="magicline">강의</a>
+							<a href="${path}/video/list" class="magicline">강의</a>
 								<div class="header_dropdown">
 								<div class="arrow"></div>
 									<ul class="header_dropdown_menu">
@@ -313,7 +313,7 @@
 					</div>
 					<div class="header_content_dropdown_wrap">
 						<div class="header_content_dropdown_group">
-							<a href="#" class="magicline">커뮤니티</a>
+							<a href="${path}/board/list" class="magicline">커뮤니티</a>
 								<div class="header_dropdown">
 								<div class="arrow"></div>
 									<ul class="header_dropdown_menu">
@@ -375,9 +375,7 @@
 	$(document).on('click', '#header_join', function(){
 		location.href="${path}/join";
 	});
-	$(document).on('click', '.magicline', function(){
-		location.href="${path}/video/list";
-	});
+	
 	$(document).on('click', '#header_btn_logout', function(){
 		$.ajax({
 			url:'${path}/login/out',

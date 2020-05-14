@@ -22,6 +22,8 @@ public class VideoController {
 	
 	@GetMapping("/videoclass")
 	public String videoclass() {
+		
+		log.info(">>>>> GET videoclass page");
 		return "video/videoclass";
 		
 	}

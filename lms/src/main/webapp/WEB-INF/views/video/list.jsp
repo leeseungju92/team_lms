@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="${path}/resources/css/common.css">
 	<meta charset="utf-8">
 	<title> video list </title>
 	<script src="https://kit.fontawesome.com/2518bc55d6.js" crossorigin="anonymous"></script>
