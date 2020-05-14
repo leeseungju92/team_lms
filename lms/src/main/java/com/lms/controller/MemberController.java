@@ -36,11 +36,11 @@ public class MemberController {
 	public String loginPage(){
 		return "member/login";
 	}
-	@GetMapping("/join")
+//	@GetMapping("/join")
 	public String joinPage(){
 		return "member/join";
 	}
-	@PostMapping("/join")
+//	@PostMapping("/join")
 	public String joinpage(@ModelAttribute("memberDTO") MemberDTO mDto, SessionStatus sessionStatus, HttpServletRequest request, RedirectAttributes rttr) {
 		log.info(">>>>>>>>> 멤바 쪼인 포스트 디비에 회원정보 저장");
 		log.info(mDto.toString());
@@ -55,10 +55,7 @@ public class MemberController {
 		
 		
 		mailService.mailSendUser(mDto.getId(), mDto.getId(), request);
-		/*
-		 * 세션어트리뷰트를 사용할때 , 인서트, 업데이트가 완료되고 뷰로 보내기전 반드시
-		 * 셋컴플리트를 실행하여 세션에 담긴값을 클리어 해주어야한다.
-		 */
+	
 		
 		sessionStatus.setComplete();
 		
@@ -68,7 +65,7 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
-	@GetMapping("/member/keyauth")
+//	@GetMapping("/member/keyauth")
 	public String keyAuth(String id, String key, RedirectAttributes rttr) {
 		mailService.keyAuth(id, key);
 		rttr.addFlashAttribute("id",id);
