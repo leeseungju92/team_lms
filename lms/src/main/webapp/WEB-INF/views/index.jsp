@@ -364,7 +364,7 @@
 								<span>처음하는 코딩 - 플레이봇(JavaScript)</span>
 								<div class="new_class_price">
 									<span>
-										<del>22,000원</del>
+										<del>122,000원</del>
 										<span class="">16,500원</span>
 									</span>
 								</div>
