@@ -36,11 +36,11 @@ public class MemberController {
 	public String loginPage(){
 		return "member/login";
 	}
-//	@GetMapping("/join")
+//	@GetMapping("/join")//
 	public String joinPage(){
 		return "member/join";
 	}
-//	@PostMapping("/join")
+//	@PostMapping("/join")//
 	public String joinpage(@ModelAttribute("memberDTO") MemberDTO mDto, SessionStatus sessionStatus, HttpServletRequest request, RedirectAttributes rttr) {
 		log.info(">>>>>>>>> 멤바 쪼인 포스트 디비에 회원정보 저장");
 		log.info(mDto.toString());
@@ -65,7 +65,7 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
-//	@GetMapping("/member/keyauth")
+	//@GetMapping("/member/keyauth")//
 	public String keyAuth(String id, String key, RedirectAttributes rttr) {
 		mailService.keyAuth(id, key);
 		rttr.addFlashAttribute("id",id);

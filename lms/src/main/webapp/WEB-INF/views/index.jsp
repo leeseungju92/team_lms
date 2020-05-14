@@ -78,7 +78,7 @@
 			justify-content: center;
 		}
 		.new_class_area{
-			/*width: 80%;*/
+			width: 80%;
 			height: 100px;
 			margin: 0 6px;
 		}
