@@ -375,6 +375,9 @@
 	$(document).on('click', '#header_join', function(){
 		location.href="${path}/join";
 	});
+	$(document).on('click', '.magicline', function(){
+		location.href="${path}/video/list";
+	});
 	$(document).on('click', '#header_btn_logout', function(){
 		$.ajax({
 			url:'${path}/login/out',
