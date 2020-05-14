@@ -20,4 +20,10 @@ public class VideoController {
 		return "video/list";
 	}
 	
+	@GetMapping("/videoclass")
+	public String videoclass() {
+		return "video/videoclass";
+		
+	}
+	
 }

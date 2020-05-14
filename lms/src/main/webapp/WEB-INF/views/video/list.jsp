@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
+<%@ include file="../include/include.jsp" %>  
 <%@ include file="../include/header.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -74,7 +75,8 @@
 	}
 	.thumnail_img{
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */ 
+		
 	}
 	.column_thumnail{
 		width: 40%;
@@ -150,17 +152,21 @@
 		<div class="avi_list">
 			<div class="column">
 				
-				<div class="column_thumnail">
-					<img src="../img/10.jpg" class="thumnail_img">
-				</div>
-
-				<div class="column_notice">
-					<h2>[C#과 유니티로 만드는 MMORPG 게임 개발 시리즈] Part3: 유니티 엔진</h2>
-					<span>모의해킹 실무에서 활용되고 있는 프리다 (Frida)의 완벽 활용법을 배울 수 있습니다.
-					</span><br>
-					<span>평점</span>
-				</div>
-				
+					<div class="column_thumnail">
+						<a href="#" class="moving_btn">
+						<img src="${path}/resources/img/tiger.jpg" class="thumnail_img">
+						
+					</div>
+	
+					<div class="column_notice">
+						
+						<h2>[C#과 유니티로 만드는 MMORPG 게임 개발 시리즈] Part3: 유니티 엔진</h2>
+						<span>모의해킹 실무에서 활용되고 있는 프리다 (Frida)의 완벽 활용법을 배울 수 있습니다.
+						</span><br>
+						</a>
+						<span>평점</span>
+					</div>
+					
 				<div class="column_price">
 					<h2>10,000</h2>
 					<button class="side_btn" type="button"><i class="fas fa-shopping-cart"></i></button>
@@ -174,7 +180,7 @@
 			<div class="column">
 				
 				<div class="column_thumnail">
-					<img src="../img/10.jpg" class="thumnail_img">
+					<img src="${path}/resources/img/tiger.jpg" class="thumnail_img">
 				</div>
 
 				<div class="column_notice">
@@ -195,4 +201,11 @@
 		
 	</div>
 </body>
+<script type="text/javascript">
+	
+	$(document).on('click', '.moving_btn', function(){
+		location.href="${path}/video/videoclass";
+	})
+	
+</script>
 </html>
