@@ -284,7 +284,7 @@
 							<div class="topic_start_footer_left">2챕터 18레슨
 							</div>
 							<div class="topic_start_footer_right">
-								<span>11111주과정</span>
+								<span>1주과정</span>
 							</div>
 						</div>
 					</a>
