@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	list
+	list.jsp
 </body>
 </html>
