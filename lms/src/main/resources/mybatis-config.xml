@@ -4,7 +4,6 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.lms.domain.MemberDTO" alias="MemberDTO"/>
-		<typeAlias type="com.lms.domain.BoardDTO" alias="BoardDTO"/>		
+		<typeAlias type="com.lms.domain.MemberDTO" alias="MemberDTO"/>		
 	</typeAliases>
 </configuration>
