@@ -145,19 +145,30 @@
 						<td>admin</td>
 						<td>sysdate</td>
 					</tr>
+					
+					<c:forEach items="${list}" var="list">
 					<tr>
-						<td>1</td>
-						<td class="tLeft"><a href="#">내용</a></td>
-						<td>관리자</td>
-						<td>sysdate</td>
+						<td>${list.bno}</td>
+						<td class="tLeft"><a href="#">${list.title}, ${list.content}</a></td>
+						<td>${list.name}</td>
+						<td>${list.regdate}</td>
 					</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>
 		
 		<div class="" style="margin-top: 10px">
-			<button type="button" class="btn btn-basic">글쓰기</button>
+			<button type="button" class="btn btn-basic" id="register">글쓰기</button>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	
+	$(document).on('click', '#register', function(){
+		location.href="${path}/board/register";
+	})
+	
+</script>
 </html>
+
