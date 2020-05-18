@@ -107,7 +107,7 @@ var joinValidate = {
 			}
 		}
 	},
-	checkPw : function(nowpw,pw, rpw) {
+	checkPw : function(nowpw, pw, rpw) {
 		var regEmpty = /\s/g; // 공백문자
 		var regPw = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&_*-]).{8,}$/;
 		var regHangle = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
