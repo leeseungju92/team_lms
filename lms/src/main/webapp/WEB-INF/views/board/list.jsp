@@ -141,16 +141,20 @@
 				<tbody>
 					<tr class="notice">
 						<td>공지</td>
-						<td class="tLeft"><a href="#">내용</a></td>
+						<td class="tLeft"><a href="#"></a></td>
 						<td>admin</td>
 						<td>sysdate</td>
 					</tr>
-					<tr>
-						<td>1</td>
-						<td class="tLeft"><a href="#">내용</a></td>
-						<td>관리자</td>
-						<td>sysdate</td>
+					
+					<c:forEach items="${list}" var="list">
+					<tr>					
+						<td>${list.bno}</td>
+						<td class="tLeft"><a href="#">${list.title} , ${list.content}</a></td>
+						
+						<td>${list.name}</td>
+						<td>${list.regdate}</td>
 					</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>
