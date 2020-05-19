@@ -8,4 +8,6 @@ public interface LoginService {
 
 	public int login(MemberDTO mDto, HttpSession session);
 
+	public void logout(HttpSession session);
+
 }

@@ -98,7 +98,7 @@
 	$(function(){
 		var checkArr = new Array(4).fill(false);
 		function ckDesign(code, desc, line, msg){
-			if(code == 0 || code == 10 ){				
+			if(code == 0 || code == 10){				
 				$('.userJoin_input_wrap:eq('+line+')').css('border', '2px solid #3885ca');				
 				$('.join_err_msg:eq('+msg+')').css('visibility', 'visible')
 									    .text(desc)
@@ -124,18 +124,19 @@
 				idFlag = true;
 			}else{
 				checkArr[0] = 'false';
+				idFlag = false;
 			}
 			ckDesign(result.code, result.desc, 0,0);
 		});
 		//id재확인 유효성 체크
 		$('#urid').keyup(function(){
-			var id = $.trim($('#uid').val());
+			var id = $.trim($('#uid').val());//trim 공백제거
 			var rid = $.trim($('#urid').val());
 		
 			var result = joinValidate.checkRid(id, rid, idFlag);
 			if(result.code == 10){
 				checkArr[1] = true;
-				$('.join_info_box_content:eq(1)').css('border', '2px solid #3885ca');
+				
 				
 			}else if(result.code == 6){
 				checkArr[1] = false;
@@ -146,6 +147,92 @@
 			}
 			ckDesign(result.code, result.desc, 1, 1);
 		});
+		
+		//PW 확인
+		$('#upw').keyup(function(){			
+			var pw = $.trim($('#upw').val());
+			var rpw = $.trim($('#urpw').val());			
+			var result = joinValidate.checkPw("", pw, rpw);
+			if(result.code == 0){
+				pwFlag = true;
+				checkArr[2] = true;
+				$('.join_info_box_content:eq(2)').css('border', '2px solid #3885ca');
+			}else{
+				pwFlag=false;
+				checkArr[2] = false;
+			}
+			
+			
+			
+			ckDesign(result.code, result.desc, 2, 2);
+		});	
+		
+		//pw재확인
+		$('#urpw').keyup(function(){
+			var pw = $.trim($('#upw').val());
+			var rpw = $.trim($('#urpw').val());
+			// console.log(pw+', '+rpw);
+
+			var result = joinValidate.checkRpw(pw, rpw, pwFlag);
+			// console.log(pw+', '+rpw);
+			// alert(result.code+', '+ result.desc);
+			if(result.code == 10){
+				checkArr[3] = true;
+							
+			}else if(result.code==6){
+				checkArr[3] = false;
+								
+			}else{
+				checkArr[3] = false;
+			}	
+			
+					
+			ckDesign(result.code, result.desc, 3, 3);
+		});
+		
+		$('.userJoin_input_attr').keyup(function(){
+			ckColorBtn();
+		});
+		function ckColorBtn(){
+			var checkAll = true;
+			for(var i = 0; i < checkArr.length; i++){
+				if(!checkArr[i]){
+					checkAll = false;
+				}
+			}
+			if(checkAll){
+				$('#btn_join').addClass('btn-primary');
+				// $('#btn_join').prop('disabled', false);
+				$('#btn_join').css('cursor', 'pointer');
+			}else{
+				$('#btn_join').removeClass('btn-primary');
+				// $('#btn_join').prop('disabled', true);
+				$('#btn_join').css('cursor', 'no-drop');
+			} 
+		}
+
+	
+		//회원가입 버튼 클릭!
+		$('#btn_join').click(function(){
+			var invalidAll = true;
+			for(var i = 0; i < checkArr.length; i++){
+				if(!checkArr[i]){
+					invalidAll = false;
+					$('.join_err_msg:eq('+i+')').css('visibility', 'visible')					
+												.css('color', '#d95339');
+				}				
+			}			
+			
+			if(invalidAll){
+				alert('회원가입 성공!');
+				
+				$('#frm_member').submit(); 				
+			}else{	
+				alert('유효성체크를 진행해주세요!');
+			}	
+		});
+		
+		
 		
 	});
 

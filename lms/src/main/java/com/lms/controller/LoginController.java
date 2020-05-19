@@ -36,9 +36,11 @@ public class LoginController {
 	}
 	
 
-//	@PostMapping("/out")
-//	public void logOut(HttpSession session) {
-//		log.info(">>>>>>>>>>POST : LOGOUT/ LOGOUT ACTION");
-//		lService.logout(session);
-//	}
+	@GetMapping("/out")
+	public String logOut(HttpSession session) {
+		log.info(">>>>>>>>>>POST : LOGOUT/ LOGOUT ACTION");
+		
+		session.invalidate();
+		return "redirect:/";
+	}
 }

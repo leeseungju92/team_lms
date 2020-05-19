@@ -21,5 +21,10 @@ public class MemServiceImpl implements MemService{
 		// TODO Auto-generated method stub
 		mDao.memInsert(mDto);
 	}
+	@Override
+	public int idoverlap_n(String id) {
+		// TODO Auto-generated method stub
+		return mDao.idoverlap_n(id);
+	}
 
 }

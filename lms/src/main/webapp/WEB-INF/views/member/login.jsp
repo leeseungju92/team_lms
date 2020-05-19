@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <%@ include file = "../include/header.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -105,7 +105,7 @@
 		font-size: 12px;
 		color: #fe0000;
 		box-sizing: border-box;
-		/* display: none; */
+		display: none;
 	}
 	.login_check{
 		display: flex;
@@ -187,7 +187,7 @@
 					</div>
 				</div>
 
-				<form:form id="frm_login" modelAttribute="memberDTO" atuocomplete="on">
+				
 				<div class="login_body">
 					<div class="login_input">
 						<div class="login_id ">
@@ -222,7 +222,7 @@
 						
 					</div>
 				</div>
-				</form:form>
+				
 
 				<div class="login_footer">
 					<div class="login_join_txt">
@@ -262,6 +262,8 @@ $(document).on('click','#btn_login',function(){
 											
 				}else if(data==2){
 					$('.err_msg').css('display','block').text('이메일 인증 후 로그인 할 수 있습니다.');
+				}else if(data==4){
+					$('.err_msg').css('display','block').text('삭제된 아이디입니다. ㅠㅠ');
 				}
 			},
 			error:function(){

@@ -52,9 +52,9 @@ public class MemberController {
 		if(result>0) {
 			log.info(">>>>>>"+mDto.getId()+"님 회원가입되셨습니다.");
 		}
+	
 		
-		
-		mailService.mailSendUser(mDto.getId(), mDto.getId(), request);
+		mailService.mailSendUser(mDto.getId(), request);
 	
 		
 		sessionStatus.setComplete();

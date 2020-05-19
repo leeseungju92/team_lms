@@ -361,8 +361,16 @@
 
 
 				<div class="member">
-					<div><button type="button" class="btn btn-basic login_open" id="header_login">로그인</button></div>
-					<div><button type="button" class="btn btn-primary" id="header_join">회원가입</button></div>
+					<c:choose>
+						<c:when test="${empty userid}">
+							<div><button type="button" class="btn btn-basic login_open" id="header_login">로그인</button></div>
+							<div><button type="button" class="btn btn-primary" id="header_join">회원가입</button></div>
+					</c:when>
+						<c:otherwise>
+							<div><a href="${path}/login/out">로그아웃</a></div>
+						</c:otherwise>
+					</c:choose>
+					
 				</div>
 			</div>
 		</div>

@@ -37,12 +37,12 @@ public class LoginServiceImpl implements LoginService {
 			result = 0;
 			return result;
 		}		
-		if(!(loginDto.getUseyn().equals("y"))){
+		if(!(loginDto.getUseyn().equals("y")||loginDto.getUseyn().equals("d"))){
 			result = 2;
 			return result;
 		}
 		if(loginDto.getUseyn().equals("d")){
-			result = 3;
+			result = 4;
 			return result;
 		}
 		if(loginDto != null) {
@@ -53,10 +53,17 @@ public class LoginServiceImpl implements LoginService {
 				
 				
 			}else {
+				
 				result = 3;
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public void logout(HttpSession session) {
+		// TODO Auto-generated method stub
+		session.invalidate();
 	}
 
 }
