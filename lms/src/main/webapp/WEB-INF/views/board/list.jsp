@@ -160,8 +160,14 @@
 		</div>
 		
 		<div class="" style="margin-top: 10px">
-			<button type="button" class="btn btn-basic">글쓰기</button>
+			<button type="button" class="btn btn-basic" id="register_btn">글쓰기</button>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	$(document).on('click', '#register_btn', function(){
+		location.href = '${path}/board/register';
+	});
+</script>
+
 </html>

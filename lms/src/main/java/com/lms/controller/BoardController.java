@@ -31,4 +31,11 @@ public class BoardController {
 		model.addAttribute("list", list);
 		return "board/list";
 	}
+	
+	@GetMapping("/register")
+	public String boardregister() {
+		log.info(">>>>> GET BoardRegister Page");
+		
+		return "board/register";
+	}
 }
