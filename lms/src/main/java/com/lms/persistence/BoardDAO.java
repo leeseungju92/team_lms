@@ -8,5 +8,6 @@ public interface BoardDAO {
 
 	public List<BoardDTO> boardList();
 	
+	public void boardRegister(BoardDTO bDto);
 	
 }

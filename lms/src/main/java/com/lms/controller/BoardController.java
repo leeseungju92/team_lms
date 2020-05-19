@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lms.domain.BoardDTO;
@@ -37,5 +38,15 @@ public class BoardController {
 		log.info(">>>>> GET BoardRegister Page");
 		
 		return "board/register";
+	}
+	
+	@PostMapping("/register")
+	public String boardregister(BoardDTO bDto) {
+		log.info(">>>> 글쓴거 등록해줘");
+		log.info(bDto.toString());
+		
+		bService.boardRegister(bDto);
+		
+		return "redirect:/board/list";
 	}
 }

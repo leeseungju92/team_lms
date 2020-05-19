@@ -31,5 +31,14 @@ public class BoardServiceImpl implements BoardService{
 		
 		return bDao.boardList();
 	}
+
+	@Override
+	public void boardRegister(BoardDTO bDto) {
+		
+		log.info(">>> 너가작성한거 서비스로 가져가");
+		log.info(">>>> DAO 작동해" );
+		
+		
+	}
 	
 }

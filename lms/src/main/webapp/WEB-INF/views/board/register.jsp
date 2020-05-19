@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+    
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <%@ include file="../include/include.jsp" %>  
 <%@ include file="../include/header.jsp" %>
 
@@ -204,17 +207,21 @@
 					</div>
 				</div>
 			</div>
+			
+			
+			<form:form id="register">
+			
 			<div class="board_title_box">
 				<div class="board_title_content">
 					<div class="title_bold margin_left">제목</div>
-					<div class="margin_left title_line"><input class="title_input" placeholder="제목을 입력하세요" type="" name=""></div>
+					<div class="margin_left title_line"><input class="title_input" placeholder="제목을 입력하세요" type="" name="title"></div>
 				</div>
 			</div>
 
 			<div class="board_content_box">
 				<div class="board_content_content">
 					<div class="title_bold margin_left content_line">내용</div>
-					<div class="margin_left"><textarea class="txt_content" placeholder="내용을 입력하세요"></textarea></div>
+					<div class="margin_left"><textarea class="txt_content" placeholder="내용을 입력하세요" name="content"></textarea></div>
 				</div>
 			</div>
 
@@ -236,9 +243,19 @@
 			
 			<div class="writer_btn">
 				<button class="cancle btn" type="button">취소</button>
-				<button class="agree btn" type="button">등록</button>
+				<button class="agree btn" type="button" id="register_btn">등록</button>
 			</div>
+			
+			</form:form>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	
+	$(document).on('click', '#register_btn', function(){
+		$('#register').submit();
+	});
+
+</script>
+
 </html>
